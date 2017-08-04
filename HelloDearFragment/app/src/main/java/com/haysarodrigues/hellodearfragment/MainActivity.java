@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
          * WAY 2 FORMA DE CHAMAR UM LAYOUT - Diretamente pela API
          */
 
-        if (savedInstanceState == null){ // esse if checa se a activity está sendo criada 
+        if (savedInstanceState == null){ // esse if checa se a activity está sendo criada
 
             android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
@@ -36,6 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
     }
+
 }
