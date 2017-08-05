@@ -41,5 +41,19 @@
         android:onClick="convertButton"
         android:text="Qual melhor?" />
 
+    <Button
+        android:id="@+id/buttonTirarFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="takePicture"
+        android:text="Tirar uma foto" />
+
+    <Button
+        android:id="@+id/buttonSetAlarme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setAlarm"
+        android:text="Setar Alarme" />
+
 
 </LinearLayout>
