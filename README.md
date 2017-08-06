@@ -12,3 +12,4 @@ Bunch of samples android basic projects. :iphone:
 
 ## Tips
 1. [Material Palette](https://www.materialpalette.com/)
+2. [AMAZON DEVICE FARM](https://aws.amazon.com/device-farm/)
