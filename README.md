@@ -18,5 +18,7 @@ Bunch of samples android basic projects. :iphone:
 1. [News API](https://newsapi.org) 5 :star: for this one!
 2. [jsonviewer STACK HU](http://jsonviewer.stack.hu/) - To see json object better
 3. [List of HTTP codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) you better know.
+4. [Retrofit](http://square.github.io/retrofit/)
+5. [Google Web Services](https://developers.google.com/places/web-service/)
 
 
