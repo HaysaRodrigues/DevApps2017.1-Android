@@ -12,8 +12,10 @@ import android.widget.TextView;
  * Created by Ricardo Lecheta on 10/09/2014.
  */
 public class PlanetaAdapter extends BaseAdapter {
+
     private String[] planetas = new String[]{"Mercúrio", "Vênus", "Terra", "Marte", "Júpiter",
             "Saturno", "Urano", "Netuno", "Plutão"};
+
     private Context context;
 
     public PlanetaAdapter(Context context) {
@@ -23,11 +25,13 @@ public class PlanetaAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
+
         return planetas.length;
     }
 
     @Override
     public Object getItem(int position) {
+
         return planetas[position];
     }
 
@@ -41,7 +45,7 @@ public class PlanetaAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         String planeta = planetas[position];
         View view = LayoutInflater.from(context).inflate(R.layout.adapter_planeta, parent, false);
-        Log.i("MyApp", "mimiimiMIMMIMIMIMIMIMIMIMIMIMIM");
+        //Log.i("MyApp", "mimiimiMIMMIMIMIMIMIMIMIMIMIMIM");
         TextView t = (TextView) view.findViewById(R.id.text);
         t.setText(planeta);
         return view;

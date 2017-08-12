@@ -14,10 +14,8 @@ public class PlanetaActivity extends ActionBarActivity {
 
 
         String planeta = getIntent().getStringExtra("planeta");
-
         TextView text = (TextView) findViewById(R.id.text);
         text.setText(planeta);
-
         getSupportActionBar().setTitle(planeta);
     }
 }

@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
+
             setContentView(R.layout.activity_main);
 
             // o cara que gerencia o SWIPE
@@ -23,16 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
             actionBar.setNavigationMode(android.app.ActionBar.NAVIGATION_MODE_TABS);
 
-            // Tab 1
+            /* TAB 1*/
             actionBar.addTab(actionBar.newTab().setText("Fragment 1").
                     setTabListener(new MyTabListener(viewPager, 0)));
 
             // Tab 2
             actionBar.addTab(actionBar.newTab().setText("Fragment 2").
                     setTabListener(new MyTabListener(viewPager, 1)));
-            // Tab 3
-            actionBar.addTab(actionBar.newTab().setText("Fragment 3").
-                    setTabListener(new MyTabListener(viewPager, 2)));
+
 
             viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override

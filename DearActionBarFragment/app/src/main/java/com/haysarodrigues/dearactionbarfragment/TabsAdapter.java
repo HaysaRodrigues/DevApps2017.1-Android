@@ -3,7 +3,6 @@ package com.haysarodrigues.dearactionbarfragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 
 /**
  * Created by Haysa on 04/08/17.
@@ -12,6 +11,7 @@ import android.support.v4.view.PagerAdapter;
 class TabsAdapter extends FragmentPagerAdapter {
 
     public TabsAdapter(FragmentManager supportFragmentManager){
+
         super(supportFragmentManager);
     }
 
@@ -22,14 +22,12 @@ class TabsAdapter extends FragmentPagerAdapter {
         if (position == 0){
             return new Fragment1();
         }
-        else if (position == 1){
-            return new Fragment2();
-        }
-        return new Fragment3();
+        return new Fragment2();
     }
 
     @Override
     public int getCount() {
-        return 3; //view page com 3 páginas
+
+        return 2;
     }
 }
