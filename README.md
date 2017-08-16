@@ -13,6 +13,7 @@ Bunch of samples android basic projects. :iphone:
 ## Tips
 1. [Material Palette](https://www.materialpalette.com/)
 2. [AMAZON DEVICE FARM](https://aws.amazon.com/device-farm/)
+3. [Pretty much tips](https://riggaroo.co.za/resources-getting-started-android-development/) 
 
 ## Tips 2 (Learning/Working with API's)
 1. [News API](https://newsapi.org) 5 :star: for this one!
