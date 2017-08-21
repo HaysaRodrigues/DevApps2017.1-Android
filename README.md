@@ -22,5 +22,6 @@ Bunch of samples android basic projects. :iphone:
 4. [Retrofit](http://square.github.io/retrofit/)
 5. [Google Web Services](https://developers.google.com/places/web-service/)
 6. [The Movie Database](https://developers.themoviedb.org/3/getting-started) 5 :star:
+7. [Retrofit by Vogella](http://www.vogella.com/tutorials/Retrofit/article.html#retrofit)
 
 
