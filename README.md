@@ -13,10 +13,15 @@ Bunch of samples android basic projects. :iphone:
 ## Tips
 1. [Material Palette](https://www.materialpalette.com/)
 2. [AMAZON DEVICE FARM](https://aws.amazon.com/device-farm/)
+3. [Pretty much tips](https://riggaroo.co.za/resources-getting-started-android-development/) 
 
-## Tips 2 (Learning/Working with API's)
+## Tips 2 (Learning & Working with API)
 1. [News API](https://newsapi.org) 5 :star: for this one!
 2. [jsonviewer STACK HU](http://jsonviewer.stack.hu/) - To see json object better
 3. [List of HTTP codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) you better know.
+4. [Retrofit](http://square.github.io/retrofit/)
+5. [Google Web Services](https://developers.google.com/places/web-service/)
+6. [The Movie Database](https://developers.themoviedb.org/3/getting-started) 5 :star:
+7. [Retrofit by Vogella](http://www.vogella.com/tutorials/Retrofit/article.html#retrofit)
 
 
