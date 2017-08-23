@@ -12,7 +12,10 @@ public class Article {
     private String urlToImage;
 
     public Article(String author, String description, String title, String urlToImage){
-
+        this.author = author;
+        this.description = description;
+        this.title = title;
+        this.urlToImage = urlToImage;
 
     }
 
@@ -32,8 +35,6 @@ public class Article {
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
     }
-
-
 
     public String getAuthor() {
         return author;

@@ -26,7 +26,7 @@ import model.Article;
 
 public class Util {
 
-    public static final String pURL = "https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=220f0186b217493291490cc084ca2185";
+    //public static final String pURL = "https://newsapi.org/v1/articles?source=the-verge&sortBy=top&apiKey=220f0186b217493291490cc084ca2185";
     public static final int timeout = 10000;
 
 
@@ -52,7 +52,7 @@ public class Util {
     }
 
     // pegar o stream
-    public static InputStream getStream(){
+    public static InputStream getStream(String pURL){
 
 
         try {
@@ -102,7 +102,8 @@ public class Util {
 
                 }
 
-                return new String(baos.toByteArray());
+                baos.close();
+                retorno = new String(baos.toByteArray());
 
             } catch (IOException e) {
                 e.printStackTrace();
