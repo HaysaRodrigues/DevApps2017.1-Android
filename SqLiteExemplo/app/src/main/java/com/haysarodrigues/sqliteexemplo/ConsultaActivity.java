@@ -1,8 +1,11 @@
 package com.haysarodrigues.sqliteexemplo;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
@@ -21,7 +24,7 @@ public class ConsultaActivity extends AppCompatActivity {
         // qual a diferença entre base context e get context e get application context?
         BancoController controller = new BancoController(getBaseContext());
 
-        Cursor cursor = controller.carregaDados();
+        final Cursor cursor = controller.listaDados();
         String[] nomeCampos = new String[] {"_id", "titulo"};
         int[] idViews = new int[] {R.id.idLivro, R.id.nomeLivro};
 
@@ -34,5 +37,21 @@ public class ConsultaActivity extends AppCompatActivity {
         lista = (ListView)findViewById(R.id.listView);
         lista.setAdapter(adaptador);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                String code;
+                cursor.moveToPosition(i);
+                code = cursor.getString(cursor.getColumnIndexOrThrow("_id"));
+                Intent intent = new Intent(ConsultaActivity.this, AlterarActivity.class);
+                intent.putExtra("codigo", code);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
+
 }

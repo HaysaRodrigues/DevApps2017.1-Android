@@ -45,7 +45,7 @@ public class BancoController {
     }
 
 
-    public Cursor carregaDados(){
+    public Cursor listaDados(){
 
         Cursor cursor;
         String[] campos =  {"_id","titulo"};
@@ -57,6 +57,51 @@ public class BancoController {
         }
         db.close();
         return cursor;
+    }
+
+    public Cursor carregaDadoById(int id){
+
+        Cursor cursor;
+        String[] campos =  {"_id","titulo","autor","editora"};
+        String where = "_id" + " = " + id;
+        db = banco.getReadableDatabase();
+        cursor = db.query(CriaBanco.TABELA,campos,where, null, null, null, null, null);
+
+        if(cursor != null){
+            cursor.moveToFirst();
+        }
+
+        db.close();
+
+
+        return cursor;
+    }
+
+    public void alteraRegistro(int id, String titulo, String autor, String editora){
+
+        ContentValues valores;
+        String where;
+
+        db = banco.getWritableDatabase();
+        where = "_id" + " = " + id;
+
+        valores = new ContentValues();
+
+        valores.put("titulo", titulo);
+        valores.put("autor", autor);
+        valores.put("editora", editora);
+
+        // String table, ContentValues values, String whereClause
+        db.update(CriaBanco.TABELA,valores,where,null);
+        db.close();
+
+    }
+
+    public void deletaRegistro(int id){
+        String where = "_id" + " = " + id;
+        db = banco.getReadableDatabase();
+        db.delete(CriaBanco.TABELA,where,null);
+        db.close();
     }
 }
 
