@@ -14,11 +14,7 @@ public class CriaBanco extends SQLiteOpenHelper {
 
       public static final String NOME_BANCO = "banquinho.db";
       public static final String TABELA = "livros_haysa";
-//    public static final String ID = "_id";
-//    public static final String TITULO = "titulo";
-//    public static final String AUTOR = "autor";
-//    public static final String EDITORA = "editora";
-    private static final int VERSAO = 1;
+      private static final int VERSAO = 1;
 
 
     public CriaBanco(Context context){
@@ -26,18 +22,9 @@ public class CriaBanco extends SQLiteOpenHelper {
 
     }
 
-    //chamado quando a aplicação cria o banco de dados pela primeira vez.
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-//
-//        String sql = "create table if not exists "+TABELA+"("
-//                   + ID + " integer primary key autoincrement,"
-//                   + TITULO + "text,"
-//                   + AUTOR + "text,"
-//                   + EDITORA + "text"
-//                   + ")";
-//
-//        Log.d("EEEEEEEI", sql);
+
         String sql = "create table if not exists livros_haysa " +
                 "(_id integer primary key autoincrement,titulo text,autor text,editora text);";
         sqLiteDatabase.execSQL(sql);

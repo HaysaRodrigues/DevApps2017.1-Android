@@ -28,7 +28,7 @@ public class ConsultaActivity extends AppCompatActivity {
         String[] nomeCampos = new String[] {"_id", "titulo"};
         int[] idViews = new int[] {R.id.idLivro, R.id.nomeLivro};
 
-        // esse cara é a grande sacada, ele pega os campos que vc quer montar e recuperar (array de dados que vc quer recuperar)
+        // esse cara pega os campos que vc quer montar e recuperar (array de dados que vc quer recuperar)
         // depois voce cria um array de contantes do R para onde vc quer mostrar esses dados
         // e vc monta dentro do SIMPLE CURSOR ADAPTER
         SimpleCursorAdapter adaptador = new SimpleCursorAdapter(getBaseContext(),

@@ -34,8 +34,6 @@ public class BancoController {
         resultado = db.insert("livros_haysa", "", valores);
         db.close();
 
-        // retorna a quantidade de linhas
-
         if (resultado == -1) {
             return "Erro ao inserir registro";
 
