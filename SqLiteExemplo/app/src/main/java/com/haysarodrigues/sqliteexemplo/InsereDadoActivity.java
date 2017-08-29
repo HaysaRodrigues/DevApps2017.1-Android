@@ -19,27 +19,32 @@ public class InsereDadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicial);
 
-        Button botao = (Button)findViewById(R.id.button);
+        Button botao = (Button) findViewById(R.id.button);
+        botao.setOnClickListener(onClickCreateRegisterButton());
 
-        botao.setOnClickListener(new View.OnClickListener() {
+    }
+
+    private View.OnClickListener onClickCreateRegisterButton() {
+        return new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 BancoController crud = new BancoController(getBaseContext());
-                EditText titulo = (EditText)findViewById(R.id.editText);
-                EditText autor = (EditText)findViewById((R.id.editText2));
-                EditText editora = (EditText)findViewById(R.id.editText3);
+                EditText titulo = (EditText) findViewById(R.id.editText);
+                EditText autor = (EditText) findViewById((R.id.editText2));
+                EditText editora = (EditText) findViewById(R.id.editText3);
                 String tituloString = titulo.getText().toString();
                 String autorString = autor.getText().toString();
                 String editoraString = editora.getText().toString();
                 String resultado;
 
-                resultado = crud.insereDado(tituloString,autorString,editoraString);
+                resultado = crud.insereDado(tituloString, autorString, editoraString);
 
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 
             }
-        });
+        };
+
 
     }
 
@@ -55,7 +60,7 @@ public class InsereDadoActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        if (id == R.id.action_about){
+        if (id == R.id.action_about) {
             Intent mIntent = new Intent(this, ConsultaActivity.class);
             startActivity(mIntent);
             return true;
